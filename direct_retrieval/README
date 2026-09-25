@@ -1,0 +1,11 @@
+Step 1 _______ prepare_training_files.py__________ 
+Create mean and std values of doppler spectra (npy files) and ice particle properties (json files)
+Run it: python prepare_training_files.py config_cpu.json
+
+Step 2 _______ train the direct retrival
+important parameters in config.json (config_cpu.json is the version for cpu) 
+   nb_epochs: how many times the data will pass the model for training (with batch_size steps for each epoch)
+   batch_size: number of data used to train the model (e.g. 100)
+   val_batch_size: number of input for each evaluation (e.g. 100) 
+   learning_rate_ini: "size" of the step used for adjustment of the weights during the gradient descent (e.g. 1e-3)
+ 
