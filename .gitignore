@@ -1,4 +1,5 @@
-*.npy
 *.h5
 *.hdf5
 *.feather
+*std.npy
+*mean.npy
