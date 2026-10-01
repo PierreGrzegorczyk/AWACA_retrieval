@@ -1,0 +1,45 @@
+{
+    "directory": "/home/grzegorc/AWACA/Retrieval/DeepSpectralRetrieval-main/direct_retrieval/training_output/",
+    
+    "target_array": "/home/grzegorc/AWACA/Retrieval/DeepSpectralRetrieval-main/spectra_database_creation/output_data/targets.npy",
+    "spectrum_h5": "/home/grzegorc/AWACA/Retrieval/DeepSpectralRetrieval-main/spectra_database_creation/output_data/batch0_0_all_wind_ts.h5",
+    "i_start_ds": 0,
+    "i_end_ds": 76619,
+    "i_start_val_ds": 76619,
+    "i_end_val_ds": -1,
+    
+    "normalize_spectra": 1,
+    "normalize_target": 1,
+    
+    "mean_normalization_json": "/home/grzegorc/AWACA/Retrieval/DeepSpectralRetrieval-main/spectra_database_creation/output_data/spectrum_mean.json",
+    "std_normalization_json": "/home/grzegorc/AWACA/Retrieval/DeepSpectralRetrieval-main/spectra_database_creation/output_data/spectrum_std.json",
+    "mean_normalization_npy": "/home/grzegorc/AWACA/Retrieval/DeepSpectralRetrieval-main/spectra_database_creation/output_data/targets_mean.npy",
+    "std_normalization_npy": "/home/grzegorc/AWACA/Retrieval/DeepSpectralRetrieval-main/spectra_database_creation/output_data/targets_std.npy",
+    "shuffle_pre_train": 0,
+    
+    
+    "use_subsampler":1,
+    "with_wind":1,
+    
+    "nb_epochs": 20,
+    "batch_size": 100,
+    "val_batch_size": 100,
+    "learning_rate_ini": 1e-3,
+    
+    "model_name": "Direct_w_Resblock_seq",
+    "n_channels":20,
+    "device": "cpu",
+    
+    "scheduler": "step",
+    "lr_sched_step": 5,
+    "lr_sched_gamma": 0.2,
+    "stop_decreasing_after": 40,
+    
+    "checkpoint_name": "checkpoint.pth",
+    
+    "init": "xavier_normal",
+    
+    "ts_size_per_epoch":1500000,
+    "num_workers_loader": 32
+        
+}

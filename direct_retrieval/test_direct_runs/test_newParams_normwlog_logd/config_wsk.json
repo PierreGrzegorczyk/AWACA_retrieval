@@ -1,0 +1,46 @@
+{
+    "directory": "/home/billault/ml_design/direct2/test_direct_runs/test_newParams_normwlog_logd/",
+    
+    "target_array": "../input_newParams_w_minspec_sk_log_logd.h5",
+    "spectrum_h5": "/data/acbr_spectra_dbcreation/newParams_all_wind_ts_withsk.h5",
+    "i_start_ds": 0,
+    "i_end_ds": 65000000,
+    "i_start_val_ds": 65000000,
+    "i_end_val_ds": 79634235,
+    
+    "normalize_spectra": 1,
+    "normalize_target": 1,
+    
+    "mean_normalization_json": "/ltenas3/anneclaire/spectra_database/means_newParams_w_minspec_log.json",
+    "std_normalization_json": "/ltenas3/anneclaire/spectra_database/stds_newParams_w_minspec_log.json",
+    "mean_normalization_npy": "/ltenas3/anneclaire/spectra_database/means_newParams_w_minspec_sk_log_logd.npy",
+    "std_normalization_npy": "/ltenas3/anneclaire/spectra_database/stds_newParams_w_minspec_sk_log_logd.npy",
+    
+    "shuffle_pre_train": 0,
+    
+    
+    "use_subsampler":1,
+    "with_wind":1,
+    
+    "nb_epochs": 50,
+    "batch_size": 100,
+    "val_batch_size": 100,
+    "learning_rate_ini": 1e-3,
+    
+    "model_name": "Direct_w_Resblock_seq",
+    "n_channels":20,
+    "device": "cuda",
+    
+    "scheduler": "step",
+    "lr_sched_step": 5,
+    "lr_sched_gamma": 0.2,
+    "stop_decreasing_after": 40,
+    
+    "checkpoint_name": "checkpoint.pth",
+    
+    "init": "xavier_normal",
+    
+    "ts_size_per_epoch":1500000,
+    "num_workers_loader": 32
+        
+}

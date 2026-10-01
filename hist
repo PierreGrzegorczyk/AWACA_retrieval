@@ -1,0 +1,1000 @@
+  998  cd OUT_golden_case_test/
+  999  spixf
+ 1000  spix
+ 1001  101
+ 1002  spix
+ 1003  ssh lteuser@ltesrv5.epfl.ch
+ 1004  spix
+ 1005  sftp lteuser@ltesrv5.epfl.ch
+ 1006  spix
+ 1007  cd AWACA/LMDZ/
+ 1008  llt
+ 1009  mkdir OUT_mars19
+ 1010  cd OUT_mars19/
+ 1011  llt
+ 1012  spixf
+ 1013  spix
+ 1014  cd
+ 1015  vi .cdsapirc 
+ 1016  spix
+ 1017  cd AWACA/LMDZ/OUT_fev20/* 
+ 1018  cd
+ 1019  cd AWACA/LMDZ
+ 1020  cd OUT_fev20
+ 1021  spixf
+ 1022  cd
+ 1023  module load cdo
+ 1024  cd ..
+ 1025  ls
+ 1026  cd ..
+ 1027  ls
+ 1028  cd ..
+ 1029  ls
+ 1030  llt
+ 1031  pwd
+ 1032  cd /home/grzegorc/AWACA/New_cases/MARCH19
+ 1033  spixf
+ 1034  llt
+ 1035  spix
+ 1036  101
+ 1037  spix
+ 1038  cd AWACA/Corentin/
+ 1039  spixf
+ 1040  spix
+ 1041  cd AWACA/New_cases/MARS19/
+ 1042  spixf
+ 1043  llt
+ 1044  spix
+ 1045  spixf 
+ 1046  spix
+ 1047  jz
+ 1048  spix
+ 1049  q!
+ 1050  :q!
+ 1051  clear
+ 1052  cdtmp
+ 1053  cd AWACA_DATA/
+ 1054  cd Mira/
+ 1055  llt
+ 1056  cd D17/
+ 1057  llt
+ 1058  cd 03
+ 1059  ls
+ 1060  sftp lteuser@ltesrv5.epfl.ch
+ 1061  spix
+ 1062  cd AWACA/LMDZ/OUT_mars19
+ 1063  spixf 
+ 1064  cd AWACA_DATA/
+ 1065  llt
+ 1066  cd MRR/
+ 1067  llt
+ 1068  spix
+ 1069  sftp lteuser@ltesrv5.epfl.ch
+ 1070  cd
+ 1071  sftp lteuser@ltesrv5.epfl.ch
+ 1072  ssh lteuser@ltesrv5.epfl.ch
+ 1073  spix
+ 1074  cd AWACA/LMDZ/OUT_mars19/
+ 1075  spixf
+ 1076  ssh lteuser@ltesrv5.epfl.ch
+ 1077  cd ../OUT_fev20/
+ 1078  llt
+ 1079  spixf
+ 1080  spix
+ 1081  spix
+ 1082  cd AWACA/LMDZ/OUT_fev20/
+ 1083  llt
+ 1084  rm  MRR_D47_20FEV.nc MRR_DDU_20FEV.nc MRR_D17_20FEV.nc
+ 1085  spixf
+ 1086  spix
+ 1087  Jstat
+ 1088  cd AWACA/New_cases/GC/
+ 1089  llt
+ 1090  pwd
+ 1091  spixf
+ 1092  cd AWACA/LMDZ/OUT_golden_case_v20/
+ 1093  llt
+ 1094  spix
+ 1095  spixf 
+ 1096  llt
+ 1097  cd ..
+ 1098  cd
+ 1099  cd AWACA_DATA/
+ 1100  cd MRR/D85
+ 1101  llt
+ 1102  mkdir 02
+ 1103  cd 02/
+ 1104  spixf
+ 1105  sftp lteuser@ltesrv5.epfl.ch
+ 1106  spix
+ 1107  cd ..
+ 1108  spixf 
+ 1109  pwd
+ 1110  mv /home/grzegorc/AWACA_DATA/MRR/D85/MRR_12FEV_D85.nc /home/grzegorc/AWACA/New_cases/GC 
+ 1111  mv /home/grzegorc/AWACA_DATA/MRR/D47/MRR_12FEV_D47.nc /home/grzegorc/AWACA/New_cases/GC 
+ 1112  mv /home/grzegorc/AWACA_DATA/MRR/D17/MRR_12FEV_D17.nc /home/grzegorc/AWACA/New_cases/GC 
+ 1113  mv /home/grzegorc/AWACA_DATA/MRR/DDU/MRR_12FEV_DDU.nc /home/grzegorc/AWACA/New_cases/GC 
+ 1114  cd ..
+ 1115  cd
+ 1116  cd AWACA/LORIS/
+ 1117  llt
+ 1118  vi PAMTRA/PAMTRA_lmdz_global_ini.py
+ 1119  spix
+ 1120  conda activate copsp-env
+ 1121  conda activate LORIS-env
+ 1122  cd
+ 1123  cd AWACA
+ 1124  ls
+ 1125  cd Retrieval/DeepSpectralRetrieval-main/spectra_database_creation/
+ 1126  conda activate cosp-env
+ 1127  cd 
+ 1128  cd AWACA/PAMTRA/
+ 1129  mmt
+ 1130  llt
+ 1131  cd ../LORIS
+ 1132  llt
+ 1133  cd PAMTRA/
+ 1134  llt
+ 1135  ./Start_Pam.sh 
+ 1136  source Start_Pam.sh 
+ 1137  vi Start_Pam.sh 
+ 1138  cd ~/AWACA/Retrieval/DeepSpectralRetrieval-main/spectra_database_creation
+ 1139  llt
+ 1140  python3 00_simulate_spectra.py
+ 1141  python3 00_simulate_spectra.py 0 1000
+ 1142  conda install -c conda-forge pyarrow
+ 1143  python3 00_simulate_spectra.py 0 1000
+ 1144  python3 01_convert_to_h5.py 0 8
+ 1145  history 1000
+ 1146  python3 01_convert_to_h5.py 0 8
+ 1147  conda install -c conda-forge h5py
+ 1148  python3 01_convert_to_h5.py 0 8
+ 1149  python3 01_convert_to_h5.py
+ 1150  python3 01_convert_to_h5.py 0 
+ 1151  python3 01_convert_to_h5.py 8
+ 1152  python3 01_convert_to_h5.py 8
+ 1153  python 01_convert_to_h5.py batch0_0
+ 1154  python 01_convert_to_h5.py 0
+ 1155  python 01_convert_to_h5.py 8
+ 1156  python 01_convert_to_h5.py 
+ 1157  python 01_convert_to_h5.py batch0_0
+ 1158  python 02_merge_h5.py 
+ 1159  python 02_merge_h5.py batch0_0
+ 1160  python 03_merge_h5.py batch0_0
+ 1161  python 03_add_turb_to_h5.py batch0_0
+ 1162  python 04_prepare_train_set.py batch0_0
+ 1163  spix
+ 1164  cd AWACA
+ 1165  llt
+ 1166  cd Retrieval/
+ 1167  llt
+ 1168  cd DeepSpectralRetrieval-main/
+ 1169  llt
+ 1170  cd direct_retrieval/
+ 1171  grep "spectrum" *
+ 1172  vi config.json 
+ 1173  cp config.json config.json.base
+ 1174  vi config.json 
+ 1175  grep "6\." *
+ 1176  vi tests_direct.ipynb
+ 1177  grep "6\." *
+ 1178  vi tests_direct.ipynb
+ 1179  grep "6\." *
+ 1180  vi dataloader_implementation.py
+ 1181  grep "6\." *
+ 1182  vi dataloader_implementation.py
+ 1183  vi config.json 
+ 1184  pwd
+ 1185  vi config.json 
+ 1186  ls
+ 1187  vi config.json 
+ 1188  ls
+ 1189  cd ..
+ 1190  llt
+ 1191  cd spectra_database_creation/
+ 1192  ls
+ 1193  cd output_data/
+ 1194  llt
+ 1195  pwd
+ 1196  cd ../../
+ 1197  ls
+ 1198  cd direct_retrieval/
+ 1199  llt
+ 1200  vi config.json
+ 1201  grep mean_normalization_json *
+ 1202  vi dataloader_implementation.py
+ 1203  llt
+ 1204  conda active cosp-env
+ 1205  conda activate cosp-env
+ 1206  llt
+ 1207  vi test_direct_wdataloader.py
+ 1208  python3 test_direct_wdataloader.py
+ 1209  vi config.json
+ 1210  conda install pytorch -c pytorch
+ 1211  conda install pytorch cpuonly -c pytorch
+ 1212  nvidia-smi
+ 1213  pip install torch --index-url https://download.pytorch.org/whl/cpu
+ 1214  python3 test_direct_wdataloader.py
+ 1215  pip install tensorboard
+ 1216  python3 test_direct_wdataloader.py
+ 1217  vi config.json
+ 1218  vi test_direct_wdataloader.py
+ 1219  vi config.json
+ 1220  python3 test_direct_wdataloader.py
+ 1221  vi test_direct_wdataloader.py
+ 1222  python3 test_direct_wdataloader.py
+ 1223  pwd
+ 1224  python3 test_direct_wdataloader.py
+ 1225  vi test_direct_wdataloader.py
+ 1226  python3 test_direct_wdataloader.py
+ 1227  ls /home/AWACA/Retrieval/DeepSpectralRetrieval-main/spectra_database_creation/output_data
+ 1228  vi config.json
+ 1229  python3 test_direct_wdataloader.py
+ 1230  ls /home/grzegorc/AWACA/Retrieval/DeepSpectralRetrieval-main/spectra_database_creation/output_data/
+ 1231  vi config.json
+ 1232  python3 test_direct_wdataloader.py
+ 1233  vi /home/grzegorc/AWACA/Retrieval/DeepSpectralRetrieval-main/direct_retrieval/dataloader_direct.py
+ 1234  python3 test_direct_wdataloader.py
+ 1235  vi config.json
+ 1236  grep npy *
+ 1237  grep -r npy *
+ 1238  cd direct_retrieval/
+ 1239  clear
+ 1240  cd direct_retrieval/
+ 1241  grep -r npy *
+ 1242  ls
+ 1243  cd ..
+ 1244  cd spectra_database_creation/
+ 1245  grep -r npy *
+ 1246  cd ..
+ 1247  lks
+ 1248  llt
+ 1249  cd direct_retrieval/
+ 1250  llt
+ 1251  vi events.out.tfevents.1789725095.ltelap25.12257.0
+ 1252  python test_direct_wdataloader.py
+ 1253  vi /home/grzegorc/AWACA/Retrieval/DeepSpectralRetrieval-main/direct_retrieval/dataloader_direct.py
+ 1254  grep _X *
+ 1255  vi dataloader_implementation.py
+ 1256  grep _X *
+ 1257  clear
+ 1258  grep _X *
+ 1259  vi dataloader_implementation.py
+ 1260  vi config.json
+ 1261  python test_direct_wdataloader.py
+ 1262  vi config.json
+ 1263  python test_direct_wdataloader.py
+ 1264  cd ..
+ 1265  cd -
+ 1266  grep npy *
+ 1267  grep -r npy *
+ 1268  vi decoder/config_X.jso
+ 1269  vi decoder/config_X.json
+ 1270  cd decoder/
+ 1271  grep -r npy *
+ 1272  vi dataloader_decoder.py
+ 1273  llt
+ 1274  vi config_X.json
+ 1275  cd ..
+ 1276  grep -r "mean_normalization_npy" *
+ 1277  ls
+ 1278  cd spectra_database_creation/
+ 1279  llt
+ 1280  cd parameters/
+ 1281  ls
+ 1282  cd ../output_data/
+ 1283  llt
+ 1284  cd batch0/
+ 1285  llt
+ 1286  cd batch0_0/
+ 1287  ls
+ 1288  cd ..
+ 1289  ls
+ 1290  cd parameters/
+ 1291  ls
+ 1292  cd ../sr
+ 1293  cd ../ssrg_coefficients/
+ 1294  llt
+ 1295  cd ..
+ 1296  grep npy *
+ 1297  grep -r npy *
+ 1298  cd ..
+ 1299  vi README.md 
+ 1300  cd decoder/
+ 1301  llt
+ 1302  mv config_X.json config_Ka.json
+ 1303  vi config_Ka.json 
+ 1304  cd ..
+ 1305  grep -r std_normalization_npy *
+ 1306  cd direct_retrieval/
+ 1307  llt
+ 1308  vi direct_retrieval/test_direct_wdataloader.py
+ 1309  cd ..
+ 1310  vi direct_retrieval/test_direct_wdataloader.py
+ 1311  cd direct_retrieval/
+ 1312  llt
+ 1313  vi direct_main.py 
+ 1314  clear
+ 1315  grep -r npy *
+ 1316  cd ../
+ 1317  ls
+ 1318  cd spectra_database_creation/
+ 1319  ls
+ 1320  grep -r npy *
+ 1321  grep -r npx *
+ 1322  grep -r lkna *
+ 1323  grep -r lkn *
+ 1324  clear
+ 1325  cd ..
+ 1326  grep -r npy *
+ 1327  find . -type f -name "*.npy"
+ 1328  grep -r npy *
+ 1329  grep -r NPY *
+ 1330  grep -r '\.npy' *
+ 1331  clear
+ 1332  llt
+ 1333  cd direct_retrieval/
+ 1334  grep -r '\npy' *
+ 1335  vi direct_main.py
+ 1336  clear
+ 1337  grep -r "_npy" *
+ 1338  vi dataloader_direct.py
+ 1339  grep target_mean_for_normalization *
+ 1340  vi dataloader_direct.py
+ 1341  vi config.json
+ 1342  ls
+ 1343  llt
+ 1344  hhh
+ 1345  history 100
+ 1346  history 1000
+ 1347  python test_direct_wdataloader.py
+ 1348  python test_direct_wdataloader.py config.json
+ 1349  vi test_direct_wdataloader.py
+ 1350  cd ..
+ 1351  grep "mean_normalization_npy" *
+ 1352  grep -r "mean_normalization_npy" *
+ 1353  cd ..
+ 1354  llt
+ 1355  cd ..
+ 1356  llt
+ 1357  cd -
+ 1358  llt
+ 1359  cd DeepSpectralRetrieval-main/
+ 1360  llt
+ 1361  vi direct_retrieval/
+ 1362  cd direct_retrieval/
+ 1363  llt
+ 1364  vi config.json.base 
+ 1365  llt
+ 1366  vi dataloader_direct.py 
+ 1367  vi direct_main.py 
+ 1368  vi config.json.base 
+ 1369  vi direct_main.py 
+ 1370  vi config.json.base 
+ 1371  vi direct_main.py 
+ 1372  spix
+ 1373  cd AWACA_DATA/
+ 1374  llt
+ 1375  cd Quicklooks/
+ 1376  llt
+ 1377  cd d17/
+ 1378  ls
+ 1379  cd 2026
+ 1380  ls
+ 1381  cd ../mira/
+ 1382  ll
+ 1383  llt
+ 1384  cd 2026
+ 1385  llt
+ 1386  pwd
+ 1387  spixf
+ 1388  sftp lteuser@ltesrv5.epfl.ch
+ 1389  cd ~/AWACA_DATA/Quicklooks/d17/mira/2026
+ 1390  spixf
+ 1391  spix 
+ 1392  spix
+ 1393  ls
+ 1394  cd /home/grzegorc/Documents/Voiture
+ 1395  vi assurance.txt
+ 1396  spix
+ 1397  cd AWACA/LMDZ/
+ 1398  llt
+ 1399  cd OUT_golden_case_v19
+ 1400  llt
+ 1401  cd ..
+ 1402  cd OUT_golden_case_v20/
+ 1403  spixf
+ 1404  spix
+ 1405  cdwork
+ 1406  spix
+ 1407  spixf
+ 1408  spix
+ 1409  spix
+ 1410  spix
+ 1411  cd AWACA/LMDZ/OUT_golden_case_v20/
+ 1412  llt
+ 1413  rm TEST-amip-ERA5-LAM.EOI1_20250212_20250218_INS_histinsD*
+ 1414  llt
+ 1415  spix
+ 1416  spixf
+ 1417  spix
+ 1418  spix
+ 1419  spix
+ 1420  ckear
+ 1421  clear
+ 1422  cd AWACA/Retrieval/
+ 1423  llt
+ 1424  cd DeepSpectralRetrieval-main/
+ 1425  llt
+ 1426  cd direct_retrieval
+ 1427  llt
+ 1428  vi script dataloader_direct.py
+ 1429  vi dataloader_direct.py 
+ 1430  llt
+ 1431  vi config.json
+ 1432  vi dataloader_direct.py 
+ 1433  grep -r spectra_mean_for_normalization_W *
+ 1434  vi dataloader_direct.py 
+ 1435  ctmp
+ 1436  cdtmp
+ 1437  llt
+ 1438  cdconfig
+ 1439  llt
+ 1440  cdtmp
+ 1441  SPIX
+ 1442  spic
+ 1443  spix
+ 1444  spixf
+ 1445  spix
+ 1446  spix
+ 1447  cd OUT_golden_case_v20/
+ 1448  llt
+ 1449  cd AWACA/LMDZ/OUT_golden_case_v20/
+ 1450  llt
+ 1451  rm -rf TEST-amip-ERA5-LAM.EOI1_20250212_20250218_INS_histinsD*
+ 1452  spixf
+ 1453  spix
+ 1454  rm spixf
+ 1455  spixf
+ 1456  spix
+ 1457  xpif
+ 1458  llt
+ 1459  rm TEST-amip-ERA5-LAM.EOI1_20250212_20250218_INS_histinsD*
+ 1460  llt
+ 1461  spix
+ 1462  spixf
+ 1463  llt
+ 1464  cdwork
+ 1465  cd
+ 1466  cd AWACA/Retrieval/
+ 1467  llt
+ 1468  cd DeepSpectralRetrieval-main/
+ 1469  llt
+ 1470  cd direct_retrieval/
+ 1471  llt
+ 1472  vi dataloader_direct.py 
+ 1473  grep 
+ 1474  vi config.json
+ 1475  vi dataloader_direct.py 
+ 1476  vi config.json
+ 1477  grep -r directory
+ 1478  vi direct_main.py
+ 1479  vi config
+ 1480  vi config.json
+ 1481  vi direct_main.py
+ 1482  vi config.json
+ 1483  grep i_start_ds *
+ 1484  vi dataloader_direct.py
+ 1485  vi config.json
+ 1486  grep -r target_array
+ 1487  vi direct_main.py
+ 1488  vi test_direct_wdataloader.ipynb
+ 1489  grep -r id_start
+ 1490  grep -r id_start *
+ 1491  vi config.json
+ 1492  grep -r i_start *
+ 1493  clear
+ 1494  grep -r i_start *
+ 1495  grep -r "target_dataset" *
+ 1496  grep -r "target_data" *
+ 1497  vi config.json
+ 1498  vi config.json.base 
+ 1499  vi config.json
+ 1500  vi config.json.base 
+ 1501  vi config.json
+ 1502  grep -r "i_start_ds" *
+ 1503  grep -r "i_start" *
+ 1504  clear
+ 1505  grep -r "i_start" *
+ 1506  cd ..
+ 1507  ls
+ 1508  cd decoder/
+ 1509  grep -r "i_start" *
+ 1510  ci config_Ka.json 
+ 1511  vi config_Ka.json 
+ 1512  cd -
+ 1513  ls
+ 1514  cd direct_retrieval/
+ 1515  llt
+ 1516  cd ..
+ 1517  ls
+ 1518  cd PAMTRA_data/
+ 1519  llt
+ 1520  cd ../spectra_database_creation/
+ 1521  llt
+ 1522  cd output_data/
+ 1523  llt
+ 1524  cd batch0/
+ 1525  ls
+ 1526  cd batch0_0/
+ 1527  ls
+ 1528  cd ..
+ 1529  cd direct_retrieval/
+ 1530  llt
+ 1531  vi config.json
+ 1532  grep -r 'target_array' *
+ 1533  vi test_direct_wdataloader.py
+ 1534  cd ..
+ 1535  clear
+ 1536  grep -r 'target_array' *
+ 1537  ls
+ 1538  cd direct_retrieval/
+ 1539  llt
+ 1540  vo config.json
+ 1541  vi config.json.base 
+ 1542  cd ..
+ 1543  grep -r mean_normalization_npy *
+ 1544  grep a_mass_size *
+ 1545  grep -r a_mass_size *
+ 1546  cd direct_retrieval/
+ 1547  clear
+ 1548  grep -r a_mass_size *
+ 1549  vi dataloader_direct.py 
+ 1550  cd ..
+ 1551  grep -r a_mass_size *
+ 1552  vi dataloader_direct.py 
+ 1553  llt
+ 1554  grep -r dsize *
+ 1555  cd direct_retrieval/
+ 1556  llt
+ 1557  cd ..
+ 1558  llt
+ 1559  cd decoder/
+ 1560  llt
+ 1561  cd ..
+ 1562  llt
+ 1563  cd direct_retrieval/
+ 1564  vi condif
+ 1565  vi config.json
+ 1566  vi dataloader_
+ 1567  vi dataloader_direct.py 
+ 1568  grep spectra_std_for_normalization_W *
+ 1569  vi dataloader_direct.py 
+ 1570  llt
+ 1571  vi direct_main.py 
+ 1572  vi config.json
+ 1573  python3 test_direct_wdataloader.py 
+ 1574  conda activate cosp-env
+ 1575  python3 test_direct_wdataloader.py 
+ 1576  vi config.json
+ 1577  cp config.json config_cpu.json
+ 1578  vi config_cpu.json 
+ 1579   test_direct_wdataloader.py 
+ 1580  python3 test_direct_wdataloader.py 
+ 1581  grep -r 13 *
+ 1582  clear
+ 1583  cd ..
+ 1584  grep -r 13 *
+ 1585  clear
+ 1586  grep -r a_ *
+ 1587  clear
+ 1588  grep -r a_mass_size *
+ 1589  python3 test_direct_wdataloader.py 
+ 1590  cd direct_retrieval/
+ 1591  python3 test_direct_wdataloader.py 
+ 1592  grep SIGMA_TURB ù
+ 1593  grep -r SIGMA_TURB *
+ 1594  vi dataloader_direct.py
+ 1595  python3 test_direct_wdataloader.py 
+ 1596  cd ..
+ 1597  ls
+ 1598  cd spectra_database_creation/
+ 1599  llt
+ 1600  python 04_prepare_train_set.py batch0_0
+ 1601  clear
+ 1602  python 04_prepare_train_set.py batch0_0
+ 1603  clear
+ 1604  python 04_prepare_train_set.py batch0_0
+ 1605  clear
+ 1606  python 04_prepare_train_set.py batch0_0
+ 1607  python 03_add_turb_to_h5.py batch0_0
+ 1608  python 04_prepare_train_set.py batch0_0
+ 1609  python 03_add_turb_to_h5.py batch0_0
+ 1610  python 03_add_turb_to_h5.py
+ 1611  python 03_add_turb_to_h5.py batch0_0
+ 1612  lsof | grep batch0_0_merged.h5
+ 1613  fuser batch0_0_merged.h5
+ 1614  ls
+ 1615  cd output_data/
+ 1616  fuser batch0_0_merged.h5
+ 1617  lsof | grep batch0_0_merged.h5
+ 1618  kill 22768
+ 1619  lsof | grep batch0_0_merged.h5
+ 1620  python 03_add_turb_to_h5.py batch0_0
+ 1621  cd ..
+ 1622  python 03_add_turb_to_h5.py batch0_0
+ 1623  grep -r '6\.92' *
+ 1624  vi sample_parameters.py
+ 1625  python 03_add_turb_to_h5.py batch0_0
+ 1626  python 04_add_turb_to_h5.py batch0_0
+ 1627  python 04_prepare_train_set.py 
+ 1628  python 04_prepare_train_set.py batch0_0
+ 1629  cd ..
+ 1630  cd direct_retrieval/
+ 1631  llt
+ 1632  python3 test_direct_wdataloader.py 
+ 1633  cd ../spectra_database_creation/
+ 1634  python3 04_prepare_train_set.py batch0_0
+ 1635  cd ..
+ 1636  cd direct_retrieval/
+ 1637  python3 test_direct_wdataloader.py 
+ 1638  vi config.json
+ 1639  python3 test_direct_wdataloader.py 
+ 1640  vi config.json
+ 1641  python3 test_direct_wdataloader.py 
+ 1642  vi config.json
+ 1643  python3 test_direct_wdataloader.py 
+ 1644  vi config.json
+ 1645  vi test_direct_wdataloader.py 
+ 1646  python3 test_direct_wdataloader.py 
+ 1647  vi test_direct_wdataloader.py 
+ 1648  vi config.json
+ 1649  vi test_direct_wdataloader.py 
+ 1650  vi config.json
+ 1651  python3 test_direct_wdataloader.py 
+ 1652  vi config.json
+ 1653  vi test_direct_wdataloader.py 
+ 1654  vi test_direct_wdataloader.py 
+ 1655  vi config.json
+ 1656  vi test_direct_wdataloader.py 
+ 1657  vi config_cpu.json.json
+ 1658  vi config_cpu.json
+ 1659  python3 test_direct_wdataloader.py 
+ 1660  vi config_cpu.json
+ 1661  cd ../../../LMDZ/OUT_golden_case_v20/
+ 1662  spixf
+ 1663  spix
+ 1664  spixf 
+ 1665  cd ..
+ 1666  llt
+ 1667  spix
+ 1668  cd OUT_golden_case_v20/
+ 1669  llt
+ 1670  spixf
+ 1671  spix
+ 1672  cd AWACA/LMDZ/OUT_golden_caseçv20
+ 1673  cd AWACA/LMDZ/OUT_golden_case_v20
+ 1674  llt
+ 1675  cd EOI1_6219/
+ 1676  spixf
+ 1677  llt
+ 1678  rm *.nc
+ 1679  spixf
+ 1680  spix
+ 1681  lLT
+ 1682  LLT
+ 1683  llt
+ 1684  rm *.nc
+ 1685  spix
+ 1686  spixf
+ 1687  spix
+ 1688  spixf
+ 1689  spix
+ 1690  vi model_pg.py
+ 1691  python model_pg.py config_cpu.json training_output/checkpoint_final.pth
+ 1692  conda activate cosp-env
+ 1693  python model_pg.py config_cpu.json training_output/checkpoint_final.pth
+ 1694  ssh grzegorc@lte.srv7.epfl.ch
+ 1695  ssh grzegorc@ltesrv7.epfl.ch
+ 1696  ssh grzegorc@ltelinux1.epfl.ch
+ 1697  clear
+ 1698  ssh grzegorc@ltelinux1.epfl.ch
+ 1699  llt
+ 1700  cd ..
+ 1701  llt
+ 1702  cd DeepSpectralRetrieval-main/
+ 1703  llt
+ 1704  cd P
+ 1705  ls
+ 1706  cd ..
+ 1707  cd spectra_database_creation/
+ 1708  llt
+ 1709  vi README
+ 1710  llt
+ 1711  vi 00_simulate_spectra.py
+ 1712  vi README
+ 1713  vi 00_simulate_spectra.py
+ 1714  vi README
+ 1715  vi 03_add_turb_to_h5.py 
+ 1716  vi README
+ 1717  vi 03_add_turb_to_h5.py 
+ 1718  vi README
+ 1719  vi 03_add_turb_to_h5.py 
+ 1720  vi README
+ 1721  python 01_convert_to_h5.py batch0_0
+ 1722  kkt
+ 1723  llt
+ 1724  llt output_data/
+ 1725  python 02_convert_to_h5.py batch0_0
+ 1726  python 02_merge_h5.py batch0_0
+ 1727  llt
+ 1728  llt output_data/
+ 1729  vi 02_merge_h5.py 
+ 1730  vi 03_add_turb_to_h5.py 
+ 1731  vi test 
+ 1732  conda activate cosp-env
+ 1733  cd AWACA/Retrieval/DeepSpectralRetrieval-main/
+ 1734  vi spectra_database_creation/
+ 1735  vi spectra_database_creation/02_merge_h5.py 
+ 1736  cd direct_retrieval/
+ 1737  llt
+ 1738  vi direct_models.py
+ 1739  vi direct_main
+ 1740  vi direct_main.py 
+ 1741  vi prepare_training_files.py 
+ 1742  python prepare_training_files.py config_cpu.json 
+ 1743  vi direct_main.py 
+ 1744  vi prepare_training_files.py 
+ 1745  python prepare_training_files.py config_cpu.json 
+ 1746  cd ../spectra_database_creation/
+ 1747  llt
+ 1748  cd output_data/
+ 1749  llt
+ 1750  cd ..
+ 1751  exit
+ 1752  spix
+ 1753  spix
+ 1754  conda activate cosp-env
+ 1755  python3 00_simulate_spectra.py 0 1000
+ 1756  cd
+ 1757  cd AWACA/PAMTRA/
+ 1758  llt
+ 1759  cd ../LORIS
+ 1760  cd PAMTRA/
+ 1761  cd ../../Retrieval/DeepSpectralRetrieval-main/spectra_database_creation/
+ 1762  python3 00_simulate_spectra.py 0 1000
+ 1763  vi README 
+ 1764  vi python 01_convert_to_h5.py
+ 1765  vi 01_convert_to_h5.py
+ 1766  vi README 
+ 1767  vi 02_merge_h5.py 
+ 1768  vi README 
+ 1769  vi 03_merge_h5.py
+ 1770  vi 03_add_turb_to_h5.py 
+ 1771  vi README 
+ 1772  vi 04_prepare_train_set.py 
+ 1773  cd ..
+ 1774  llt
+ 1775  cd direct_retrieval/
+ 1776  llt
+ 1777  vi prepare_training_files.py
+ 1778  vi config_cpu.json 
+ 1779  vi prepare_training_files.py
+ 1780  vi config_cpu.json 
+ 1781  vi prepare_training_files.py
+ 1782  vi config_cpu.json 
+ 1783  vi prepare_training_files.py
+ 1784  vi README 
+ 1785  vi config.json
+ 1786  vi config_cpu.json
+ 1787  vi README 
+ 1788  vi config_cpu.json
+ 1789  vi README 
+ 1790  vi config_cpu.json
+ 1791  cd
+ 1792  cd AWACA/LMDZ
+ 1793  spix
+ 1794  cd
+ 1795  vi .bashrc 
+ 1796  source .bashrc
+ 1797  spix2
+ 1798  spi
+ 1799  cd AWACA/Retrieval/
+ 1800  llt
+ 1801  cd DeepSpectralRetrieval-main/
+ 1802  llt
+ 1803  cd direct_retrieval/
+ 1804  llt
+ 1805  conda activate cosp-env
+ 1806  python prepare_training_files.py config_cpu.json
+ 1807  vi prepare_training_files.py 
+ 1808  python prepare_training_files.py config_cpu.json 
+ 1809  vi prepare_training_files.py 
+ 1810  python prepare_training_files.py config_cpu.json 
+ 1811  vi README 
+ 1812  llt
+ 1813  vi README 
+ 1814  vi config_cpu.json 
+ 1815  vi README 
+ 1816  spix
+ 1817  cd ..
+ 1818  clear
+ 1819  llt
+ 1820  ls Pierre/
+ 1821  ls PAMTRA_data
+ 1822  rm -r PAMTRA_data
+ 1823  cd spectra_database_creation
+ 1824  llt
+ 1825  vi README 
+ 1826  vi 00_simulate_spectra.py 
+ 1827  llt
+ 1828  cd output_data/
+ 1829  ls
+ 1830  cd batch0/
+ 1831  ls
+ 1832  cd batch0_0/
+ 1833  ls
+ 1834  llt
+ 1835  cd ../../../
+ 1836  vi 00_simulate_spectra.py 
+ 1837  llt
+ 1838  vi 00_simulate_spectra.py 
+ 1839  python 00_simulate_spectra.py 0 8
+ 1840  conda activate cosp-env
+ 1841  python 00_simulate_spectra.py 0 8
+ 1842  vi README 
+ 1843  python3 00_simulate_spectra.py 0 1000
+ 1844  cd ..
+ 1845  mkdir ACBR
+ 1846  cd ACBR
+ 1847  git clone https://github.com/annecbroux/DeepSpectralRetrieval
+ 1848  llt
+ 1849  cd DeepSpectralRetrieval
+ 1850  rm -rf .git
+ 1851  git init
+ 1852  git add .
+ 1853  git commit -m "Original code ACBR"
+ 1854  git remote add origin https://github.com/PierreGrzegorczyk/AWACA_retrieval
+ 1855  git branch -M ACBR
+ 1856  git push -u origin ACBR
+ 1857  cd ../
+ 1858  cd ../DeepSpectralRetrieval-main/
+ 1859  llt
+ 1860  git init
+ 1861  cd ../ACBR/DeepSpectralRetrieval/
+ 1862  llt
+ 1863  cd .git
+ 1864  llt
+ 1865  cd ..
+ 1866  ls
+ 1867  cd ../DeepSpectralRetrieval-main/
+ 1868  llt
+ 1869  cd ..
+ 1870  llt
+ 1871  cd DeepSpectralRetrieval-main/
+ 1872  grep -r Deep *
+ 1873  touch .gitignore
+ 1874  llt
+ 1875  cd spectra_database_creation/
+ 1876  llt
+ 1877  cd output_data/
+ 1878  llt
+ 1879  cd ..
+ 1880  vi .gitignore 
+ 1881  git init
+ 1882  git remote add origin https://github.com/PierreGrzegorczyk
+ 1883  git fetch origin
+ 1884  git fetch ACBR
+ 1885  git fetch 
+ 1886  git fetch origin 
+ 1887  git fetch origin
+ 1888  git switch -c AWACA --track origin/ACBR
+ 1889  git fetch origin
+ 1890  git remote add origin https://github.com/PierreGrzegorczyk/AWACA_retrieval
+ 1891  git remote -v
+ 1892  git remote add origin https://github.com/PierreGrzegorczyk/AWACA_retrieval
+ 1893  git remote set-url origin https://github.com/PierreGrzegorczyk/AWACA_retrieval.git
+ 1894  git remote -v
+ 1895  git fetch origin
+ 1896  git switch -c AWACA --track origin/ACBR
+ 1897  git stash push --include-untracked -m "Ka W retrieval for AWACA"
+ 1898  git fetch origin
+ 1899  git branch -r
+ 1900  git add .
+ 1901  git commit -m "Ka W retrieval for AWACA"
+ 1902  git switch -c AWACA
+ 1903  git push -u origin AWACA
+ 1904  spix
+ 1905  cd AWACA/LMDZ
+ 1906  cd OUT_golden_case_v20/
+ 1907  spixf
+ 1908  cdout
+ 1909  llt
+ 1910  spix
+ 1911  cd AWACA/LMDZ/OUT_golden_case_v20/
+ 1912  spixf
+ 1913  llt
+ 1914  mkdir EOI1_old_modipsl6219_noiflag
+ 1915  mv TEST-amip-ERA5-LAM.01_20250212_20250218_INS_histinsD* EOI1_old_modipsl6219_noiflag
+ 1916  spix
+ 1917  llt
+ 1918  rm -rf EOI1_old_modipsl6219 EOI1_old_modipsl6219_noiflag
+ 1919  spixf
+ 1920  diff EOI1_old_modipsl6219/TEST-amip-ERA5-LAM.01_20250212_20250218_INS_histinsD85.nc EOI1_old_modipsl6219_noiflag/TEST-amip-ERA5-LAM.01_20250212_20250218_INS_histinsD85.nc 
+ 1921  spix
+ 1922  ls
+ 1923  diff EOI1_old_modipsl6219/TEST-amip-ERA5-LAM.01_20250212_20250218_INS_histinsD85.nc EOI1_old_modipsl6219_noiflag/TEST-amip-ERA5-LAM.01_20250212_20250218_INS_histinsD85.nc 
+ 1924  spix
+ 1925  spix 
+ 1926  ssh -Y pgrzegor@spiritx1
+ 1927  cd AWACA_DATA/
+ 1928  cd Mira/
+ 1929  llt
+ 1930  spixf
+ 1931  spix
+ 1932  cd AWACA_DATA/MRR/
+ 1933  spixf
+ 1934  jz
+ 1935  spix
+ 1936  sôx
+ 1937  spix
+ 1938  wpix
+ 1939  spix
+ 1940  spix
+ 1941  cd AWACA/LMDZ/OUT_mars10/
+ 1942  spixf 
+ 1943  llt
+ 1944  mkdir rm *.nc
+ 1945  rm *.nc
+ 1946  spixf
+ 1947  spix
+ 1948  spixf
+ 1949  spix
+ 1950  history 1000 > test
+ 1951  vi test 
+ 1952  rm test
+ 1953  clear
+ 1954  ssh grzegorc@ltelinux1.epfl.ch
+ 1955  clear
+ 1956  ssh grzegorc@ltelinux1.epfl.ch
+ 1957  spix
+ 1958  cd AWACA/LMDZ/
+ 1959  llt
+ 1960  cd OUT_mars10/
+ 1961  llt
+ 1962  spixf
+ 1963  spix
+ 1964  spixf
+ 1965  spix
+ 1966  pwd
+ 1967  llt
+ 1968  ls
+ 1969  spix
+ 1970  cdtmp
+ 1971  exit
+ 1972  cd AWACA/LMDZ/OUT_mars10
+ 1973  llt
+ 1974  spixf
+ 1975  spix
+ 1976  cd AWACA/LMDZ/OUT_mars10/
+ 1977  spix
+ 1978  spixf
+ 1979  history 100000 > test
+ 1980  vi test
+ 1981  vi AWACA/Retrieval/DeepSpectralRetrieval-main/start.md
+ 1982  clear
+ 1983  vi test
+ 1984  clear
+ 1985  ssh grzegorc@ltelinux1.epfl.ch
+ 1986  cd AWACA/LMDZ
+ 1987  spixf 
+ 1988  cd ..
+ 1989  ls
+ 1990  vi .gitignore 
+ 1991  git 
+ 1992  git add .
+ 1993  git status
+ 1994  git push origin/AWACA
+ 1995  history 1000 > hist
+ 1996  vi hist 
+ 1997  history 10000 > hist
